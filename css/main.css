@@ -103,7 +103,7 @@ form p.empty{ display: block; }
 form input, form textarea { width: 100%; padding: 7px; margin-top: 16px; font-family: 'Titillium Web', sans-serif; }
 form input[type="text"], form input[type="email"], form textarea { width: 100%; border: 1px solid #0b0b0b; }
 form textarea { height: 11%; }
-form #submit { background: #142d67; color: #fff; border: none; font-size: 15px; display: block; width: 60%; margin: 3% auto 1%; }
+form #submit { background: #142d67; color: #fff; border: none; font-size: 15px; display: block; width: 60%; margin: 3% auto 1%; cursor: pointer; }
 .ouch { background: rgba(248, 13, 0, 0.34); }
 
 
