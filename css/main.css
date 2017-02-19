@@ -1,0 +1,152 @@
+/***************************/
+/****     GENERIQUES    ****/
+/***************************/
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+html { font-family: 'Titillium Web', sans-serif; }
+section { width: 100%; min-height: 100%; box-sizing: border-box; }
+h1 { font-size: 50px; text-align: center; padding: 100px 40px 40px; color: #142d67; font-weight: bolder; }
+h2 { font-size: 30px; }
+p { margin: 10px auto 30px; line-height: 1.8; font-size: 18px; }
+b { font-weight: bold; }
+.anch { cursor: pointer; background: #142d67; box-sizing: border-box; margin: 30px auto; display: block; padding: 10px 20px; color: #FFFFFF; text-align: center; width: 250px; font-size: 23px; text-decoration: none; border: 2px solid #142d67; }
+.anch:hover { background: #FFFFFF; color: #142d67; border: 2px solid #142d67; }
+.center { width: 60%; margin: auto; }
+.on { transform: translateX(0) !important; }
+.hide { overflow: hidden; }
+.nope { display: none; }
+
+@media (min-width: 960px) {
+    .center { width: 60%; margin: auto; max-width: 1200px; }
+}
+
+@media (max-width: 960px) {
+    .center { width: 90%; margin: auto; }
+}
+
+
+/***************************/
+/****       HEADER      ****/
+/***************************/
+
+header { z-index: 10; transition: 0.1s; position: fixed; width: 100%; background: #142d67; }
+header li { display: inline-block; text-align: center; }
+header a { width: 100%; display: inline-block;  color: #FFFFFF; text-decoration: none; font-weight: bold; }
+.menu { width: 40px; height: 40px; display: block; position: absolute; top: 25px; left: 5px; background: url(../media/menu.png); background-size: cover; transform: translateY(-50%);}
+header h1 { text-align: center; color: #fff; font-weight: bolder; text-decoration: none; }
+
+@media (min-width: 960px) {
+    header li { width: 23%; }
+    header a { padding: 20px 0; font-size: 20px; }
+    .menu { display: none; }
+    header h1 { text-align: center; padding: 10px 0 2px; }
+    .top-header { transform: translateY(-55%); }
+}
+
+@media (max-width: 960px) {
+    header { min-height: 50px; }
+    header li { width: 100%; }
+    header a { padding: 20px 0; font-size: 20px; }
+    .menu { display: block; }
+    header h1 { margin: 9px; font-size: 28px; padding: 2px 0; }
+    .none { display: none; }
+}
+
+
+/***************************/
+/****        HOME       ****/
+/***************************/
+
+#welcome { background: url(../media/servers.png) center; color: #fff; background-size: cover;}
+#welcome div { transform: translate(-50%, -50%); top: 50%; position: absolute;  left: 50%; }
+#welcome p{ text-align: center; margin: 50px; font-size: 27px; }
+
+@media (min-width: 960px) {
+    #welcome div { width: 500px;}
+}
+
+@media (max-width: 960px) {
+    #welcome div { width: 90%;}
+}
+
+
+/***************************/
+/****    PRESENTATION   ****/
+/***************************/
+
+#presentation p { margin: 20px auto 10px; }
+#presentation div {  margin: 10px auto 50px; }
+
+/***************************/
+/****       CHAT        ****/
+/***************************/
+
+@keyframes chat { 0% { background-position-y: 45%; } 50% { background-position-y: 55%; } 100% { background-position-y: 45%; } }
+#chat { position: fixed; top: 0; right: 0; z-index: 20; background: #ffffff; transform: translateX(100%); height: 100%; transition: 0.5s; }
+#viewer { border: 1px solid #0f488a; height: 49%; overflow-y: scroll;}
+li span { font-weight: bold; }
+#chat ul li { margin: 15px 10px; }
+
+#msg-but { cursor: pointer; display: block; background-color: #56aeec; background-image: url(../media/chat.png); background-position: center; background-repeat: no-repeat; background-size: 75%; width: 65px; height: 65px; position: absolute; left: 0; transform: translate(-100%, -50%); border-radius: 20% 0 0 20%; animation: chat 0.5s infinite ease; transition: 0.15s}
+#msg-cross { display: block; background: url(../media/cross.png) center no-repeat; width: 40px; height: 40px; position: absolute; top: 1%; left: 1%; background-size: 100%; }
+
+#blackout { position: fixed; width: 100%; height: 100%; background: rgba(8, 17, 27, 0.9); z-index: 15; transition: 0.5s; }
+.connect { display: block; width: 250px; height: 60px; margin: auto; cursor: pointer; }
+#GGC { background: url(../media/gg_normal.png); background-size: cover; }
+#GGC:focus { background: url(../media/gg_focus.png); background-size: cover;}
+#GGC:active { background: url(../media/gg_pressed.png); background-size: cover;}
+#GGDC { display: block; text-align: center; margin: 4% 13%; color: #0f488a; padding: 3%; cursor: pointer; text-decoration: underline; }
+#connectUserName { margin: 0; }
+#error { display: none; text-align: center; }
+form { margin-top: 5%; }
+form p.empty{ display: block; }
+form input, form textarea { width: 100%; padding: 7px; margin-top: 16px; font-family: 'Titillium Web', sans-serif; }
+form input[type="text"], form input[type="email"], form textarea { width: 100%; border: 1px solid #0b0b0b; }
+form textarea { height: 11%; }
+form #submit { background: #142d67; color: #fff; border: none; font-size: 15px; display: block; width: 60%; margin: 3% auto 1%; }
+.ouch { background: rgba(248, 13, 0, 0.34); }
+
+
+@media (min-width: 960px) {
+    #chat { width: 40%; padding: 0 3%; max-width: 500px; }
+    #chat h1 { padding: 3% 0; font-size: 34px; }
+    #msg-cross { display: none; }
+    #msg-but { top: 50%; }
+    #msg-but:hover { background-color: #2a658e; }
+    #msg-but:after { content: 'CHAT'; color: #fff; position: absolute; top: 50%; left: 0%; font-size: 23px; transform: translate(-50%,-50%); opacity: 0; transition: 0.15s;     text-shadow: 0 0 7px #000; }
+    #msg-but:hover:after { opacity: 1; left: -55%;}
+}
+
+@media (max-width: 960px) {
+    #chat { width: 100%; padding: 0 3%; }
+    #chat h1 { margin: 10% 0 6%; font-size: 34px; padding: 0; }
+    #msg-but { top: 80%; }
+}
+
+/***************************/
+/****      PARTAGE      ****/
+/***************************/
+
+#share { background: url(../media/code.png) center; color: #fff; background-size: cover;}
+#share h1 { color: #fff; }
+#share ul { margin: 13% auto 0; max-width: 600px }
+#share ul li { display: inline-block; width: 49%; }
+#share ul li img { margin: auto; display: block; }
+#share ul li p { color: #fff; text-decoration: none; text-align: center; }
+
+
+/***************************/
+/****      DONNEES      ****/
+/***************************/
+
+#header { text-align: center; display: block; margin: 0 auto; padding: 5px 0 20px; background: #142d67; }
+
+#header a { font-size: 20px; color: #fff; }
+#header h1 { color: #fff; padding: 20px 0;}
+
+table { margin: 50px auto !important; }
+td p { margin: 6px auto; }
+td { border: 1px solid #000; text-align: center; padding: 16px; }
+td:first-child { width: 70%; padding: 16px 0 16px 44px; text-align: left; color: #142d67; }
+
+.td-title { background: #142d67; color: #fff !important; font-weight: bold; font-size: 20px; text-align: center !important; padding: 16px 0 !important; }
